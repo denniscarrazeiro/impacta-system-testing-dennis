@@ -7,7 +7,7 @@ public class ListarProcessos extends BasePage{
     public ListarProcessos(DriverQA stepDriver) {
         super(stepDriver);
     }
-    
+
     public void clicarNovo(){
         driver.click("#btn-novo","css");
     }

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>system-testing - System Testing Execution Report</td>
+              <td>1</td>
+            <td>04 jan 2021, 18:30</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.afterScenario(Scenario)</td>
+              <td>6</td>
+              <td class="duration" data-value="216900">0.000</td>
+              <td class="duration" data-value="36150">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.beforeScenario(Scenario)</td>
+              <td>6</td>
+              <td class="duration" data-value="587600">0.000</td>
+              <td class="duration" data-value="97933">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsuarioClicarNoBotaoApagarEConfirmarMensagem()</td>
+              <td>1</td>
+              <td class="duration" data-value="6352420700">6.352</td>
+              <td class="duration" data-value="6352420700">6.352</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsuarioClicarNoBotaoMostrar()</td>
+              <td>1</td>
+              <td class="duration" data-value="10294622700">10.294</td>
+              <td class="duration" data-value="10294622700">10.294</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsuarioClicarNoBotaoSalvarNoCadastroDeProcessos()</td>
+              <td>6</td>
+              <td class="duration" data-value="5930586600">5.930</td>
+              <td class="duration" data-value="988431100">0.988</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsuarioDeveriaVerAMensagemNoCadastroDeProcessos(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="187826800">0.187</td>
+              <td class="duration" data-value="62608933">0.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsuarioDeveriaVerAMensagemNoEditarProcessos(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="94130800">0.094</td>
+              <td class="duration" data-value="94130800">0.094</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsuarioNaoVeraMaisOProcessoNaLista()</td>
+              <td>1</td>
+              <td class="duration" data-value="10130536200">10.130</td>
+              <td class="duration" data-value="10130536200">10.130</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsuarioPreencheOCampoComOValorNoEditarProcessos(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1063476100">1.063</td>
+              <td class="duration" data-value="1063476100">1.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsu&aacute;rioClicarEmSalvar()</td>
+              <td>1</td>
+              <td class="duration" data-value="1004011300">1.004</td>
+              <td class="duration" data-value="1004011300">1.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.oUsu&aacute;rioClicarNoBot&atilde;oEditar()</td>
+              <td>1</td>
+              <td class="duration" data-value="8420516400">8.420</td>
+              <td class="duration" data-value="8420516400">8.420</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.queOUsuarioClicarNoBotaoNovoProcesso()</td>
+              <td>8</td>
+              <td class="duration" data-value="59351339200">59.351</td>
+              <td class="duration" data-value="7418917400">7.418</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.queOUsuarioClicarNoMenuProcessos()</td>
+              <td>11</td>
+              <td class="duration" data-value="2537281900">2.537</td>
+              <td class="duration" data-value="230661990">0.230</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.queOUsuarioEstaNaPaginaInicial()</td>
+              <td>11</td>
+              <td class="duration" data-value="22919152000">22.919</td>
+              <td class="duration" data-value="2083559272">2.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.queOUsuarioPreencheOCampoComOValorNoCadastroDeProcessos(String,String)</td>
+              <td>72</td>
+              <td class="duration" data-value="21420427300">21.420</td>
+              <td class="duration" data-value="297505934">0.297</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ProcessosSteps.usuarioDeveObterOCodigo()</td>
+              <td>1</td>
+              <td class="duration" data-value="3304229300">3.304</td>
+              <td class="duration" data-value="3304229300">3.304</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>16</td>
+            <td>131</td>
+            <td class="duration">2:33.011</td>
+            <td class="duration">1.168</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
